@@ -44,7 +44,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3142</string>
+	<string>3147</string>
 	<key>FacebookAppID</key>
 	<string>269799726466566</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -73,6 +73,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pelotonia uses your photo library to store photos you take with the app during the ride.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Baksheesh-Bold.ttf</string>
