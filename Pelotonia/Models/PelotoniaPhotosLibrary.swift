@@ -34,7 +34,7 @@ class PelotoniaPhotosLibrary: NSObject {
             completionHandler: { (success:Bool, error:Error?) in
                 if (success) {
                     let result:PHFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [assetCollectionPlaceholder.localIdentifier], options: nil)
-                    self.collection = result.firstObject as! PHAssetCollection?
+                    self.collection = result.firstObject
                     completion(self.collection)
                 }
         })

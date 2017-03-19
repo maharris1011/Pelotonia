@@ -133,16 +133,16 @@ static NSInteger kBlogButton = 4;
             // at some point in the near future, allow users to register from their profiles directly, using some
             // web forms submitted directly to the Pelotonia site
             
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/register"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/register"] options:@{} completionHandler:nil];
         }
         else if (indexPath.row == kClassifiedsButton) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://pelotonia.org/classifieds"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://pelotonia.org/classifieds"] options:@{} completionHandler:nil];
         }
         else if (indexPath.row == kBlogButton) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/the-blog"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/the-blog"] options:@{} completionHandler:nil];
         }
         else if (indexPath.row == kVideoButton) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/ride/safety"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/ride/safety"] options:@{} completionHandler:nil];
         }
     }
     

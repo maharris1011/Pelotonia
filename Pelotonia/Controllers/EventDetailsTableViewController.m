@@ -160,7 +160,7 @@
         
         NSString *stringURL = [NSString stringWithFormat:mapsScheme, [address stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
         NSURL *url = [NSURL URLWithString:stringURL];
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }
 }
 

@@ -183,13 +183,13 @@ static NSInteger SANDLOT_ROW = 6;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == FAQ_ROW) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/ride/faq"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org/ride/faq"] options:@{} completionHandler:nil];
     }
     else if (indexPath.row == PELOTONIA_ROW) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org"] options:@{} completionHandler:nil];
     }
     else if (indexPath.row == SANDLOT_ROW) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.isandlot.com/about-us"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.isandlot.com/about-us"] options:@{} completionHandler:nil];
     }
 }
 
