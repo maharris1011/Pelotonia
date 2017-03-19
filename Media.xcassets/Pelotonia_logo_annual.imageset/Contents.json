@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Pelotonia_logo_annual-1.png",
+      "filename" : "Pelotonia17_Block_RGB_GRN.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pelotonia_logo_annual-2.png",
+      "filename" : "Pelotonia17_Block_RGB_GRN-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pelotonia_logo_annual-3.png",
+      "filename" : "Pelotonia17_Block_RGB_GRN-2.png",
       "scale" : "3x"
     }
   ],

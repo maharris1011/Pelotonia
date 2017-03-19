@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0531B93815B222B10015A003 /* PelotoniaWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0531B93715B222B10015A003 /* PelotoniaWeb.m */; };
-		40AC65A5EC934870A6348701 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE71682D602405B80BC7208 /* libPods.a */; };
 		4D15DDDC1621C9140050DB17 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15DDD71621C9140050DB17 /* UIImage+Alpha.m */; };
 		4D15DDDD1621C9140050DB17 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15DDD91621C9140050DB17 /* UIImage+Resize.m */; };
 		4D15DDDE1621C9140050DB17 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15DDDB1621C9140050DB17 /* UIImage+RoundedCorner.m */; };
@@ -55,6 +54,7 @@
 		4DD7F53B15B5108300B1DF42 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD7F53915B5108300B1DF42 /* AddressBook.framework */; };
 		4DD7F53C15B5108300B1DF42 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD7F53A15B5108300B1DF42 /* AddressBookUI.framework */; };
 		4DFA61E015F8545800BD7514 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA61DF15F8545800BD7514 /* ProfileTableViewController.m */; };
+		9DD51DA21FAC1804FAEFD361 /* libPods-Pelotonia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D957E25C3AC2FF5568BA13 /* libPods-Pelotonia.a */; };
 		BB02D28E173B476400656E43 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB02D28D173B476400656E43 /* CoreTelephony.framework */; };
 		BB22414D17F529030054F16D /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22414C17F529030054F16D /* FeedbackViewController.m */; };
 		BB2865EA176ABB05001BA804 /* ProfileDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2865E9176ABB05001BA804 /* ProfileDetailsTableViewController.m */; };
@@ -126,7 +126,7 @@
 /* Begin PBXFileReference section */
 		0531B93615B222B10015A003 /* PelotoniaWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PelotoniaWeb.h; path = Vendor/PelotoniaWeb/PelotoniaWeb.h; sourceTree = "<group>"; };
 		0531B93715B222B10015A003 /* PelotoniaWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PelotoniaWeb.m; path = Vendor/PelotoniaWeb/PelotoniaWeb.m; sourceTree = "<group>"; };
-		444F0BD36E762A7DC28B6DFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		22D957E25C3AC2FF5568BA13 /* libPods-Pelotonia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pelotonia.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D15DDD61621C9140050DB17 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		4D15DDD71621C9140050DB17 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		4D15DDD81621C9140050DB17 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -179,8 +179,7 @@
 		4DD7F53E15B5108B00B1DF42 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4DFA61DE15F8545800BD7514 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableViewController.h; path = Controllers/ProfileTableViewController.h; sourceTree = "<group>"; };
 		4DFA61DF15F8545800BD7514 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableViewController.m; path = Controllers/ProfileTableViewController.m; sourceTree = "<group>"; };
-		6F95B61090C6B59DA2453B93 /* Pods.adhoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.adhoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.adhoc distribution.xcconfig"; sourceTree = "<group>"; };
-		9CE71682D602405B80BC7208 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B9AD6C084E6DDA47A212EE /* Pods-Pelotonia.adhoc distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pelotonia.adhoc distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Pelotonia/Pods-Pelotonia.adhoc distribution.xcconfig"; sourceTree = "<group>"; };
 		BB02D28D173B476400656E43 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BB22414B17F529030054F16D /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedbackViewController.h; path = Controllers/FeedbackViewController.h; sourceTree = "<group>"; };
 		BB22414C17F529030054F16D /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedbackViewController.m; path = Controllers/FeedbackViewController.m; sourceTree = "<group>"; };
@@ -296,7 +295,8 @@
 		BCE3B81915AE586800205530 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BCE3B81C15AE5B6F00205530 /* Rider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rider.h; path = Models/Rider.h; sourceTree = "<group>"; };
 		BCE3B81D15AE5B6F00205530 /* Rider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rider.m; path = Models/Rider.m; sourceTree = "<group>"; };
-		D2604BC7990A390B9AA5A1E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D0B2EF55750CC12A6085E76B /* Pods-Pelotonia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pelotonia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pelotonia/Pods-Pelotonia.release.xcconfig"; sourceTree = "<group>"; };
+		F4070C9E320D5E8DFB179080 /* Pods-Pelotonia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pelotonia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pelotonia/Pods-Pelotonia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,7 +334,7 @@
 				BCE3B81A15AE586800205530 /* libxml2.dylib in Frameworks */,
 				BCE3B7B715AE49DA00205530 /* UIKit.framework in Frameworks */,
 				BCE3B7B915AE49DA00205530 /* Foundation.framework in Frameworks */,
-				40AC65A5EC934870A6348701 /* libPods.a in Frameworks */,
+				9DD51DA21FAC1804FAEFD361 /* libPods-Pelotonia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,12 +415,12 @@
 			name = Baksheesh;
 			sourceTree = "<group>";
 		};
-		7A06482601989E005CFA377D /* Pods */ = {
+		93BEE2ADF20CF5F907CBC101 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				444F0BD36E762A7DC28B6DFB /* Pods.debug.xcconfig */,
-				D2604BC7990A390B9AA5A1E0 /* Pods.release.xcconfig */,
-				6F95B61090C6B59DA2453B93 /* Pods.adhoc distribution.xcconfig */,
+				F4070C9E320D5E8DFB179080 /* Pods-Pelotonia.debug.xcconfig */,
+				D0B2EF55750CC12A6085E76B /* Pods-Pelotonia.release.xcconfig */,
+				93B9AD6C084E6DDA47A212EE /* Pods-Pelotonia.adhoc distribution.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 				BCE3B7BC15AE49DA00205530 /* Pelotonia */,
 				BCE3B7B515AE49DA00205530 /* Frameworks */,
 				BCE3B7B315AE49DA00205530 /* Products */,
-				7A06482601989E005CFA377D /* Pods */,
+				93BEE2ADF20CF5F907CBC101 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -506,7 +506,7 @@
 				BCE3B7B615AE49DA00205530 /* UIKit.framework */,
 				BCE3B7B815AE49DA00205530 /* Foundation.framework */,
 				BCE3B7BA15AE49DA00205530 /* CoreGraphics.framework */,
-				9CE71682D602405B80BC7208 /* libPods.a */,
+				22D957E25C3AC2FF5568BA13 /* libPods-Pelotonia.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -648,13 +648,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE3B7CA15AE49DA00205530 /* Build configuration list for PBXNativeTarget "Pelotonia" */;
 			buildPhases = (
-				37D2A5901C424C10A1DFDC6A /* Check Pods Manifest.lock */,
+				BB81FFA0E147AE91D66430DB /* [CP] Check Pods Manifest.lock */,
 				BCE3B7AE15AE49DA00205530 /* Sources */,
 				BCE3B7AF15AE49DA00205530 /* Frameworks */,
 				BBF159DC176C28C500DFA92C /* ShellScript */,
 				BCE3B7B015AE49DA00205530 /* Resources */,
-				17118B413CE84F48A2F75643 /* Copy Pods Resources */,
-				E1096C375360C3445732B8D2 /* Embed Pods Frameworks */,
+				D54A733AF185A58C83A2160A /* [CP] Embed Pods Frameworks */,
+				AE42A414DC85D049C0D701B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,10 +671,11 @@
 		BCE3B7A915AE49DA00205530 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					BCE3B7B115AE49DA00205530 = {
 						DevelopmentTeam = E8N9T3D525;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -749,34 +750,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17118B413CE84F48A2F75643 /* Copy Pods Resources */ = {
+		AE42A414DC85D049C0D701B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pelotonia/Pods-Pelotonia-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37D2A5901C424C10A1DFDC6A /* Check Pods Manifest.lock */ = {
+		BB81FFA0E147AE91D66430DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BBF159DC176C28C500DFA92C /* ShellScript */ = {
@@ -792,19 +793,19 @@
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
-		E1096C375360C3445732B8D2 /* Embed Pods Frameworks */ = {
+		D54A733AF185A58C83A2160A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pelotonia/Pods-Pelotonia-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -888,13 +889,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Harris (L2TNTTK5TB)";
@@ -911,7 +915,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PODS_ROOT = "${SRCROOT}/Pods ";
 				PROVISIONING_PROFILE = "97b1dd0c-757b-418f-a534-d76c092bf1e5";
@@ -923,14 +927,14 @@
 		};
 		4D6768C615CA17A000EA0547 /* AdHoc Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F95B61090C6B59DA2453B93 /* Pods.adhoc distribution.xcconfig */;
+			baseConfigurationReference = 93B9AD6C084E6DDA47A212EE /* Pods-Pelotonia.adhoc distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 17;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -955,7 +959,7 @@
 					"\"$(PODS_ROOT)/Headers/MagicalRecord\"/**",
 				);
 				INFOPLIST_FILE = "Pelotonia/Pelotonia-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -965,9 +969,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.pelotonia.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f4bff1c6-9935-4a88-948e-621de41c9d85";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "eb8919af-69e1-43ff-b363-2332cb44961e";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -981,13 +986,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Harris (L2TNTTK5TB)";
@@ -1012,7 +1020,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PODS_ROOT = "${SRCROOT}/Pods ";
 				PROVISIONING_PROFILE = "97b1dd0c-757b-418f-a534-d76c092bf1e5";
@@ -1025,13 +1033,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Harris (L2TNTTK5TB)";
@@ -1048,19 +1059,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PODS_ROOT = "${SRCROOT}/Pods ";
 				PROVISIONING_PROFILE = "6d3e0ebf-3c13-4e7a-9b6a-202d903c7e47";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6d3e0ebf-3c13-4e7a-9b6a-202d903c7e47";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		BCE3B7CB15AE49DA00205530 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 444F0BD36E762A7DC28B6DFB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F4070C9E320D5E8DFB179080 /* Pods-Pelotonia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1069,6 +1081,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = E8N9T3D525;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -1099,7 +1112,7 @@
 					"\"$(PODS_ROOT)/Headers/MagicalRecord\"/**",
 				);
 				INFOPLIST_FILE = "Pelotonia/Pelotonia-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
@@ -1114,9 +1127,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.pelotonia.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "97b1dd0c-757b-418f-a534-d76c092bf1e5";
+				PROVISIONING_PROFILE_SPECIFIER = "Pelotonia Development";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1127,7 +1142,7 @@
 		};
 		BCE3B7CC15AE49DA00205530 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2604BC7990A390B9AA5A1E0 /* Pods.release.xcconfig */;
+			baseConfigurationReference = D0B2EF55750CC12A6085E76B /* Pods-Pelotonia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1159,7 +1174,7 @@
 					"\"$(PODS_ROOT)/Headers/MagicalRecord\"/**",
 				);
 				INFOPLIST_FILE = "Pelotonia/Pelotonia-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -1172,6 +1187,7 @@
 				PROVISIONING_PROFILE = "519b2e82-5cc1-4582-8148-940d264e4454";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "519b2e82-5cc1-4582-8148-940d264e4454";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";

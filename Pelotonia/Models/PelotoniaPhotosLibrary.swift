@@ -15,47 +15,47 @@ class PelotoniaPhotosLibrary: NSObject {
     
     func library() -> PHPhotoLibrary?
     {
-        if (PHPhotoLibrary.authorizationStatus() != .NotDetermined) {
-            return PHPhotoLibrary.sharedPhotoLibrary();
+        if (PHPhotoLibrary.authorizationStatus() != .notDetermined) {
+            return PHPhotoLibrary.shared();
         }
         else {
             return nil;
         }
     }
 
-    func createAlbum(completion: (PHAssetCollection) -> Void) {
+    func createAlbum(_ completion: @escaping (PHAssetCollection) -> Void) {
         
         var assetCollectionPlaceholder: PHObjectPlaceholder!
         
-        PHPhotoLibrary.sharedPhotoLibrary().performChanges({
-            let request = PHAssetCollectionChangeRequest.creationRequestForAssetCollectionWithTitle(self.albumName)
+        PHPhotoLibrary.shared().performChanges({
+            let request = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: self.albumName)
             assetCollectionPlaceholder = request.placeholderForCreatedAssetCollection
             },
-            completionHandler: { (success:Bool, error:NSError?) in
+            completionHandler: { (success:Bool, error:Error?) in
                 if (success) {
-                    let result:PHFetchResult = PHAssetCollection.fetchAssetCollectionsWithLocalIdentifiers([assetCollectionPlaceholder.localIdentifier], options: nil)
-                    self.collection = result.firstObject as! PHAssetCollection
+                    let result:PHFetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [assetCollectionPlaceholder.localIdentifier], options: nil)
+                    self.collection = result.firstObject as! PHAssetCollection?
                     completion(self.collection)
                 }
         })
     }
 
-    func album(completion: (PHAssetCollection) -> Void) {
+    func album(_ completion: @escaping (PHAssetCollection) -> Void) {
         if (self.collection == nil) {
             let options:PHFetchOptions = PHFetchOptions()
             options.predicate = NSPredicate(format: "estimatedAssetCount >= 0")
             
-            let userAlbums:PHFetchResult = PHAssetCollection.fetchAssetCollectionsWithType(PHAssetCollectionType.Album, subtype: PHAssetCollectionSubtype.Any, options: options)
+            let userAlbums:PHFetchResult = PHAssetCollection.fetchAssetCollections(with: PHAssetCollectionType.album, subtype: PHAssetCollectionSubtype.any, options: options)
             
-            userAlbums.enumerateObjectsUsingBlock{ (object: AnyObject!, count: Int, stop: UnsafeMutablePointer) in
+            userAlbums.enumerateObjects({ (object: AnyObject!, count: Int, stop: UnsafeMutablePointer) in
                 if object is PHAssetCollection {
                     let obj:PHAssetCollection = object as! PHAssetCollection
                     if (obj.localizedTitle == self.albumName) {
                         self.collection = obj
-                        stop.initialize(true)
+                        stop.initialize(to: true)
                     }
                 }
-            }
+            })
             if (self.collection == nil) {
                 self.createAlbum(completion)
             }
@@ -68,16 +68,16 @@ class PelotoniaPhotosLibrary: NSObject {
         }
     }
     
-    func saveImage(image : UIImage, completion: (NSURL?, NSError!) -> Void) {
+    func saveImage(_ image : UIImage, completion: @escaping (URL?, Error?) -> Void) {
         
         library()!.performChanges({ () -> Void in
-            let createAssetRequest  = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
+            let createAssetRequest  = PHAssetChangeRequest.creationRequestForAsset(from: image)
             let assetPlaceholder  = createAssetRequest.placeholderForCreatedAsset!
-            let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.collection)
+            let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.collection)
     
-            albumChangeRequest!.addAssets([assetPlaceholder])
+            albumChangeRequest!.addAssets([assetPlaceholder] as NSArray)
             })
-            { (success : Bool, error : NSError?) -> Void in
+            { (success : Bool, error : Error?) -> Void in
                 if (success) {
                     completion(nil, nil)
                 }
@@ -87,14 +87,14 @@ class PelotoniaPhotosLibrary: NSObject {
             }
     }
     
-    func images(completion:(PHFetchResult) -> Void) {
+    func images(_ completion:@escaping (PHFetchResult<AnyObject>) -> Void) {
         let options = PHFetchOptions()
         options.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: false)
         ]
         self.album { (pelotoniaAlbum : PHAssetCollection) -> Void in
-            let images: PHFetchResult = PHAsset.fetchAssetsInAssetCollection(pelotoniaAlbum, options: options)
-            completion(images)
+            let images: PHFetchResult = PHAsset.fetchAssets(in: pelotoniaAlbum, options: options)
+            completion(images as! PHFetchResult<AnyObject>)
         }
     }
     
