@@ -74,6 +74,7 @@
 		BB78D33217FA8D3100DE639C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB78D33117FA8D3100DE639C /* Media.xcassets */; };
 		BB93182818B91ED3003A3AC0 /* PelotoniaProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB93182718B91ED3003A3AC0 /* PelotoniaProfileViewController.m */; };
 		BB93182B18B99F97003A3AC0 /* NSNumber+Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = BB93182A18B99F97003A3AC0 /* NSNumber+Currency.m */; };
+		BB97F9501E7F4B26000A147B /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB97F94F1E7F4B26000A147B /* UserNotifications.framework */; };
 		BB9E096B171AFCCD0093FDD5 /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9E096A171AFCCD0093FDD5 /* InitialSlidingViewController.m */; };
 		BB9E096E171AFF360093FDD5 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9E096D171AFF360093FDD5 /* MenuViewController.m */; };
 		BBA66C15172A9FD9002DE00A /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA66C14172A9FD9002DE00A /* ActivityViewController.m */; };
@@ -210,6 +211,7 @@
 		BB93182718B91ED3003A3AC0 /* PelotoniaProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PelotoniaProfileViewController.m; path = Controllers/PelotoniaProfileViewController.m; sourceTree = "<group>"; };
 		BB93182918B99F97003A3AC0 /* NSNumber+Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Currency.h"; sourceTree = "<group>"; };
 		BB93182A18B99F97003A3AC0 /* NSNumber+Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Currency.m"; sourceTree = "<group>"; };
+		BB97F94F1E7F4B26000A147B /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		BB9E0969171AFCCD0093FDD5 /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialSlidingViewController.h; path = Controllers/InitialSlidingViewController.h; sourceTree = "<group>"; };
 		BB9E096A171AFCCD0093FDD5 /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialSlidingViewController.m; path = Controllers/InitialSlidingViewController.m; sourceTree = "<group>"; };
 		BB9E096C171AFF360093FDD5 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controllers/MenuViewController.h; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB97F9501E7F4B26000A147B /* UserNotifications.framework in Frameworks */,
 				BBB399A6195FB9F5009B1FDF /* EventKit.framework in Frameworks */,
 				BBB399A7195FB9F5009B1FDF /* EventKitUI.framework in Frameworks */,
 				BBF496F419393050007D7D67 /* libxml2.2.dylib in Frameworks */,
@@ -475,6 +478,7 @@
 		BCE3B7B515AE49DA00205530 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB97F94F1E7F4B26000A147B /* UserNotifications.framework */,
 				BBB399A4195FB9F5009B1FDF /* EventKit.framework */,
 				BBB399A5195FB9F5009B1FDF /* EventKitUI.framework */,
 				BBF496F319393050007D7D67 /* libxml2.2.dylib */,
