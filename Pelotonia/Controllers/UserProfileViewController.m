@@ -300,9 +300,9 @@
     }
     else {
         // let them pick a rider
-        self.riderName.text = @"Your Rider Profile";
-        self.riderDistance.text = nil;
-        [self.riderPhoto setImage:[UIImage imageNamed:@"speedy_arrow"]];
+        self.riderName.text = @"Choose Rider";
+        self.riderDistance.text = @"Set Distance";
+        [self.riderPhoto setImage:[UIImage imageNamed:@"profile_default_thumb"]];
     }
     self.riderName.font = PELOTONIA_FONT(21);
     self.riderDistance.font = PELOTONIA_FONT(16);

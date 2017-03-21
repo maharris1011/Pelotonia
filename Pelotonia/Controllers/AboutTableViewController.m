@@ -189,7 +189,7 @@ static NSInteger SANDLOT_ROW = 6;
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pelotonia.org"] options:@{} completionHandler:nil];
     }
     else if (indexPath.row == SANDLOT_ROW) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.isandlot.com/about-us"] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.isandlot.com/welcome/contact"] options:@{} completionHandler:nil];
     }
 }
 
