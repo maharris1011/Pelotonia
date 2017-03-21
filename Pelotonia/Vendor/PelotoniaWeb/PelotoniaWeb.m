@@ -323,6 +323,12 @@
     return text;
 }
 
++ (TFHppleElement *)getAnchorFromRow:(TFHppleElement *)tr
+{
+    TFHppleElement *anchor = [[[[[tr childrenWithClassName:@"events-namevenue"] objectAtIndex:0] childrenWithClassName:@"event-name"] objectAtIndex:0] firstChild];
+    return anchor;
+}
+
 + (NSString *)getEventNameFromRow:(TFHppleElement *)tr
 {
     /*
@@ -333,7 +339,7 @@
      "name and address of venue"
      </td>
      */
-    TFHppleElement *anchor = [[[[tr childrenWithClassName:@"events-namevenue"] objectAtIndex:0] firstChild] firstChild];
+    TFHppleElement *anchor = [self getAnchorFromRow:tr];
     return anchor.text;
 }
 
@@ -347,7 +353,7 @@
      "name and address of venue"
      </td>
      */
-    TFHppleElement *anchor = [[[[tr childrenWithClassName:@"events-namevenue"] objectAtIndex:0] firstChild] firstChild];
+    TFHppleElement *anchor = [self getAnchorFromRow:tr];
     return [NSString stringWithFormat:@"http://www.pelotonia.org%@", [[anchor attributes] objectForKey:@"href"]];
 }
 
@@ -362,11 +368,12 @@
      </td>
      */
     TFHppleElement *tdEventsDateTime = [[tr childrenWithClassName:@"events-datetime"] objectAtIndex:0];
-    NSString *datetime = [[tdEventsDateTime firstChild] text];
+    TFHppleElement *strong = [[tdEventsDateTime childrenWithTagName:@"strong"] objectAtIndex:0];
+    NSString *datetime = [strong text];
     NSArray *dates = [datetime componentsSeparatedByString:@"- "];
     NSString *startDate = [dates objectAtIndex:0];
     
-    NSString *time = [[[tdEventsDateTime children] objectAtIndex:3] content];
+    NSString *time = [[[tdEventsDateTime children] objectAtIndex:4] content];
     NSArray *times = [time componentsSeparatedByString:@" to "];
     NSString *startTime = [times objectAtIndex:0];
     
@@ -387,11 +394,12 @@
      </td>
      */
     TFHppleElement *tdEventsDateTime = [[tr childrenWithClassName:@"events-datetime"] objectAtIndex:0];
-    NSString *datetime = [[tdEventsDateTime firstChild] text];
+    TFHppleElement *strong = [[tdEventsDateTime childrenWithTagName:@"strong"] objectAtIndex:0];
+    NSString *datetime = [strong text];
     NSArray *dates = [datetime componentsSeparatedByString:@"- "];
     NSString *endDate = [dates objectAtIndex:1];
     
-    NSString *time = [[[tdEventsDateTime children] objectAtIndex:3] content];
+    NSString *time = [[[tdEventsDateTime children] objectAtIndex:4] content];
     NSArray *times = [time componentsSeparatedByString:@" to "];
     NSString *endTime = [times objectAtIndex:1];
     

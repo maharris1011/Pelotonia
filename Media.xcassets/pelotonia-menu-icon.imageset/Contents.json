@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "2017_Bevel_Arrow_RGB.png",
+      "filename" : "2017_Bevel_Arrow_RGB_34x21.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2017_Bevel_Arrow_RGB-1.png",
+      "filename" : "2017_Bevel_Arrow_RGB_68x68.png",
       "scale" : "2x"
     },
     {

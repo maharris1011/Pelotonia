@@ -83,6 +83,7 @@
     // update the event list
     [PelotoniaWeb getPelotoniaEventsOnComplete:^{
         [self fetchAllEvents];
+        NSLog(@"fetched %lu events.", [[self.fetchedResultsController sections] count]);
         [self.tableView reloadData];
     } onFailure:^(NSString *errorMessage) {
         NSLog(@"can't get pelotonia events");
@@ -109,7 +110,9 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [[self.fetchedResultsController sections] count];
+    NSInteger i = [[self.fetchedResultsController sections] count];
+    return i;
+//    return [[self.fetchedResultsController sections] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -124,7 +127,9 @@
 {
     // Return the number of rows in the section.
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    NSInteger i = [sectionInfo numberOfObjects];
+    return i;
+//    return [sectionInfo numberOfObjects];
 }
 
 

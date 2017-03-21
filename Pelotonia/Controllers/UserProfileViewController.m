@@ -177,7 +177,7 @@
 - (void)setImageView:(UIImageView *)view toPhoto:(PHAsset *)photo withManager:(PHImageManager *)manager
 {
     UIImage *defaultImage =
-    [[UIImage imageNamed:@"profile_default_thumb"] resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+    [[UIImage imageNamed:@"profile_default_thumb"] resizedImageWithContentMode:UIViewContentModeScaleAspectFill
                                                                         bounds:self.recentImage1.bounds.size
                                                           interpolationQuality:kCGInterpolationDefault];
 
