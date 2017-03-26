@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SendGrid/SendGrid.h>
-#import <SendGrid/SendGridEmail.h>
+#import <MessageUI/MessageUI.h>
 
-@interface FeedbackViewController : UIViewController
+@interface FeedbackViewController : UIViewController <MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *feedbackText;
 - (IBAction)doneButtonPressed:(id)sender;
 - (IBAction)cancelButtonPressed:(id)sender;
