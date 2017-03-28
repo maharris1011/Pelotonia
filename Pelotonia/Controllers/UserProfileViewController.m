@@ -290,10 +290,19 @@
     if (self.rider) {
         self.riderName.text = self.rider.name;
         self.riderDistance.text = self.rider.route;
-        
         self.riderPhoto.contentMode = UIViewContentModeScaleAspectFit;
-        
+        self.riderPhoto.layer.masksToBounds = YES;
+        self.riderPhoto.layer.cornerRadius = 5.0;
+
         [self.riderPhoto setImageWithURL:[NSURL URLWithString:self.rider.riderPhotoThumbUrl] placeholderImage:[UIImage imageNamed:@"speedy_arrow"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            if (error) {
+                NSLog(@"UserProfileViewController::configureRiderCell error: %@", [error localizedDescription]);
+            }
+            else {
+                self.riderPhoto.image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill bounds:CGSizeMake(120, 90) interpolationQuality:kCGInterpolationDefault];
+            }
+            
             [self.riderProfileCell layoutSubviews];
         } usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         

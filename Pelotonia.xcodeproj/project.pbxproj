@@ -967,7 +967,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);
@@ -1125,7 +1124,6 @@
 					"-DDEBUG=1",
 				);
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);
@@ -1182,7 +1180,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
-					"-ObjC",
 					"-all_load",
 					"$(inherited)",
 				);

@@ -115,6 +115,7 @@
     
     
     // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
+    [Socialize storeLocationSharingDisabled:YES];
     [Socialize storeConsumerKey:@"26caf692-9893-4f89-86d4-d1f1ae45eb3b"];
     [Socialize storeConsumerSecret:@"6b070689-31a9-4f5a-907e-4422d87a9e42"];
     [SZFacebookUtils setAppId:@"269799726466566"];
