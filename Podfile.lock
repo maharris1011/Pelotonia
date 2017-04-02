@@ -21,7 +21,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Appirater (2.0.5)
+  - Appirater (2.1.2)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -37,12 +37,12 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - Bolts (1.7.0):
-    - Bolts/AppLinks (= 1.7.0)
-    - Bolts/Tasks (= 1.7.0)
-  - Bolts/AppLinks (1.7.0):
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
-  - Bolts/Tasks (1.7.0)
+  - Bolts/Tasks (1.8.4)
   - ECSlidingViewController (2.0.3)
   - Facebook-iOS-SDK (3.20.0):
     - Bolts (~> 1.0)
@@ -52,10 +52,10 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
-  - MBProgressHUD (0.9.2)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
+  - MBProgressHUD (1.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SendGrid (0.2.6):
     - AFNetworking (~> 2.0)
     - SMTPAPI
@@ -87,7 +87,7 @@ PODS:
   - STTwitter (0.1.4)
   - SZJSONKit (1.5)
   - SZOAuthConsumer (0.0.2)
-  - TTTAttributedLabel (1.13.4)
+  - TTTAttributedLabel (2.0.0)
   - UIActivityIndicator-for-SDWebImage (1.2):
     - SDWebImage (~> 3.7)
 
@@ -112,25 +112,25 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AAPullToRefresh: 9170fe976bad38329656fc852ee84f8095d3718e
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
+  Appirater: f1c9e53e8b612193e6256144f6a0fd2e31f4340d
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Facebook-iOS-SDK: 7f22c5d87e0f5da398f7d2a231bf55149f004585
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   Loopy: ce856c2c1a9bbc7b4770f501942157f2294a7a65
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SendGrid: dc8275118d276ad56cfbb8a9ebcdecf0a4387f36
   SMTPAPI: 84bcd13fb0c572a7a16c2045ebb4f32c97892c90
   Socialize: cf7187e66ae99772088dc904f2cd9c22d0c444f7
   STTwitter: 106de2253a24bb5a21d8817d3f40abbb341aba4a
   SZJSONKit: 9b7d3cbf8f8cd21ec56d89950a0de1fadaca766e
   SZOAuthConsumer: b62a98025846d76778ca4f24528a5c51b8e66ee6
-  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 3a9fb1d799117507e693e321e5e2055f8e340e9e
+PODFILE CHECKSUM: 35f07b697c03a9b036709b9ebced5d4b46b2a259
 
 COCOAPODS: 1.2.0
