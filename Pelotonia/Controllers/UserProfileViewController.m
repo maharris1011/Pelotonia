@@ -288,7 +288,7 @@
 - (void)configureRiderCell
 {
     if (self.rider) {
-        self.riderName.text = self.rider.name;
+        self.riderName.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
         self.riderDistance.text = self.rider.route;
         self.riderPhoto.contentMode = UIViewContentModeScaleAspectFit;
         self.riderPhoto.layer.masksToBounds = YES;
@@ -300,7 +300,9 @@
                 NSLog(@"UserProfileViewController::configureRiderCell error: %@", [error localizedDescription]);
             }
             else {
-                self.riderPhoto.image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFill bounds:CGSizeMake(120, 90) interpolationQuality:kCGInterpolationDefault];
+                self.riderPhoto.image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+                                                                    bounds:CGSizeMake(120, 90)
+                                                      interpolationQuality:kCGInterpolationDefault];
             }
             
             [self.riderProfileCell layoutSubviews];
@@ -313,7 +315,7 @@
         self.riderDistance.text = @"Set Distance";
         [self.riderPhoto setImage:[UIImage imageNamed:@"profile_default_thumb"]];
     }
-    self.riderName.font = PELOTONIA_FONT(21);
+    self.riderName.font = PELOTONIA_FONT(18);
     self.riderDistance.font = PELOTONIA_FONT(16);
     self.navigationItem.title = self.riderName.text;
 }
