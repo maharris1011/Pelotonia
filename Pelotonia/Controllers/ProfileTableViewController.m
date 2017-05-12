@@ -381,7 +381,12 @@
     // configures the static cells to have the correct data
     
     // set the name & ID appropriately
-    self.nameAndRouteCell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+    if (self.rider.riderId) {
+        self.nameAndRouteCell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+    }
+    else {
+        self.nameAndRouteCell.textLabel.text = [NSString stringWithFormat:@"%@", self.rider.name];
+    }
     self.nameAndRouteCell.detailTextLabel.text = self.rider.riderDetailText;
     if ([self.rider isRider]) {
         // Riders and Pelotons are the only ones who get progress

@@ -288,7 +288,12 @@
 - (void)configureRiderCell
 {
     if (self.rider) {
-        self.riderName.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+        if (self.rider.riderId != nil) {
+            self.riderName.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+        }
+        else {
+            self.riderName.text = [NSString stringWithFormat:@"%@", self.rider.name];
+        }
         self.riderDistance.text = self.rider.route;
         self.riderPhoto.contentMode = UIViewContentModeScaleAspectFit;
         self.riderPhoto.layer.masksToBounds = YES;
