@@ -17,8 +17,6 @@
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import <Socialize/Socialize.h>
 #import "UserProfileViewController.h"
-#import "PelotoniaLogInViewController.h"
-#import "PelotoniaSignUpViewController.h"
 #import "NSDate-Utilities.h"
 #import "NSDate+Helper.h"
 #import "UIImage+RoundedCorner.h"
