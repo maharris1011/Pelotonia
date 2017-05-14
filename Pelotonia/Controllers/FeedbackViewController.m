@@ -35,7 +35,7 @@
     NSString *feedback = self.feedbackText.text;
     // send the feedback to support@isandlot.com
     [self sendFeedback:feedback];
-    [self dismissViewControllerAnimated:YES completion:nil];
+   // [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {
@@ -73,9 +73,9 @@
     }
 }
 
-- (void) mailComposeController:(MFMailComposeViewController *)controller
-           didFinishWithResult:(MFMailComposeResult)result
-                         error:(NSError *)error
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
 {
     switch (result)
     {
