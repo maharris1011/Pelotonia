@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "RiderDataController.h"
 #import <SDWebImage/SDImageCache.h>
-
+#import <UserNotifications/UserNotifications.h>
 
 #define IF_IOS60_OR_GREATER(...) \
 if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iPhoneOS_6_0) \
@@ -21,7 +21,7 @@ __VA_ARGS__ \
 
 @class RiderDataController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UNUserNotificationCenterDelegate> {
     RiderDataController *_riderDataController;
 }
 

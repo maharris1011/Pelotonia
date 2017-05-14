@@ -177,7 +177,7 @@
 - (void)setImageView:(UIImageView *)view toPhoto:(PHAsset *)photo withManager:(PHImageManager *)manager
 {
     UIImage *defaultImage =
-    [[UIImage imageNamed:@"profile_default_thumb"] resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+    [[UIImage imageNamed:@"profile_default_thumb"] resizedImageWithContentMode:UIViewContentModeScaleAspectFill
                                                                         bounds:self.recentImage1.bounds.size
                                                           interpolationQuality:kCGInterpolationDefault];
 
@@ -288,23 +288,39 @@
 - (void)configureRiderCell
 {
     if (self.rider) {
-        self.riderName.text = self.rider.name;
+        if (self.rider.riderId != nil) {
+            self.riderName.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+        }
+        else {
+            self.riderName.text = [NSString stringWithFormat:@"%@", self.rider.name];
+        }
         self.riderDistance.text = self.rider.route;
-        
         self.riderPhoto.contentMode = UIViewContentModeScaleAspectFit;
-        
+        self.riderPhoto.layer.masksToBounds = YES;
+        self.riderPhoto.layer.cornerRadius = 5.0;
+
         [self.riderPhoto setImageWithURL:[NSURL URLWithString:self.rider.riderPhotoThumbUrl] placeholderImage:[UIImage imageNamed:@"speedy_arrow"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            if (error) {
+                NSLog(@"UserProfileViewController::configureRiderCell error: %@", [error localizedDescription]);
+            }
+            else {
+                self.riderPhoto.image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+                                                                    bounds:CGSizeMake(120, 90)
+                                                      interpolationQuality:kCGInterpolationDefault];
+            }
+            
             [self.riderProfileCell layoutSubviews];
         } usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         
     }
     else {
         // let them pick a rider
-        self.riderName.text = @"Your Rider Profile";
-        self.riderDistance.text = nil;
-        [self.riderPhoto setImage:[UIImage imageNamed:@"speedy_arrow"]];
+        self.riderName.text = @"Choose Rider";
+        self.riderDistance.text = @"Set Distance";
+        [self.riderPhoto setImage:[UIImage imageNamed:@"profile_default_thumb"]];
     }
-    self.riderName.font = PELOTONIA_FONT(21);
+    self.riderName.font = PELOTONIA_FONT(18);
     self.riderDistance.font = PELOTONIA_FONT(16);
     self.navigationItem.title = self.riderName.text;
 }

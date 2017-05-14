@@ -381,7 +381,12 @@
     // configures the static cells to have the correct data
     
     // set the name & ID appropriately
-    self.nameAndRouteCell.textLabel.text = self.rider.name;
+    if (self.rider.riderId) {
+        self.nameAndRouteCell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", self.rider.name, self.rider.riderId];
+    }
+    else {
+        self.nameAndRouteCell.textLabel.text = [NSString stringWithFormat:@"%@", self.rider.name];
+    }
     self.nameAndRouteCell.detailTextLabel.text = self.rider.riderDetailText;
     if ([self.rider isRider]) {
         // Riders and Pelotons are the only ones who get progress
@@ -394,8 +399,8 @@
     }
     self.donationProgress.progress = self.rider.pctRaised;
     
-    self.nameAndRouteCell.textLabel.font = PELOTONIA_FONT(21);
-    self.nameAndRouteCell.detailTextLabel.font = PELOTONIA_SECONDARY_FONT(17);
+    self.nameAndRouteCell.textLabel.font = PELOTONIA_FONT(18);
+    self.nameAndRouteCell.detailTextLabel.font = PELOTONIA_SECONDARY_FONT(16    );
     
     // this masks the photo to the tableviewcell
     self.nameAndRouteCell.imageView.layer.masksToBounds = YES;

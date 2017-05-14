@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 #import "RiderDataController.h"
 #import "Pelotonia-Colors.h"
 #import "Appirater.h"
@@ -17,6 +18,8 @@
 #import "InitialSlidingViewController.h"
 #import "MenuViewController.h"
 #import <Socialize/Socialize.h>
+
+#define SYSTEM_VERSION_GREATERTHAN_OR_EQUALTO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @implementation AppDelegate
 
@@ -56,16 +59,30 @@
     }
 }
 
+- (void)registerForRemoteNotifications {
+    if(SYSTEM_VERSION_GREATERTHAN_OR_EQUALTO(@"10.0")){
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+            if(!error){
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            }
+        }];
+    }
+    else {
+        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
     // Register for Apple Push Notification Service
-    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
-    
-    [application registerForRemoteNotifications];
-    
+    [self registerForRemoteNotifications];
 
     // Initialize our coredata instance
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"PelotoniaModel"];
@@ -98,6 +115,7 @@
     
     
     // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
+    [Socialize storeLocationSharingDisabled:YES];
     [Socialize storeConsumerKey:@"26caf692-9893-4f89-86d4-d1f1ae45eb3b"];
     [Socialize storeConsumerSecret:@"6b070689-31a9-4f5a-907e-4422d87a9e42"];
     [SZFacebookUtils setAppId:@"269799726466566"];
