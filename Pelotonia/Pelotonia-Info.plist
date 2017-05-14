@@ -44,7 +44,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3216</string>
+	<string>3227</string>
 	<key>FacebookAppID</key>
 	<string>269799726466566</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -73,6 +73,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Pelotonia uses your calendar to identify the current time zone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Pelotonia uses your photo library to store photos you take with the app during the ride.</string>
 	<key>UIAppFonts</key>
@@ -87,7 +89,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Storyboard</string>
 	<key>UIPrerenderedIcon</key>
-	<true/>
+	<false/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
