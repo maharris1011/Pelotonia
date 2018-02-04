@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Pelotonia
 //
-//  Created by Adam McCrea on 7/11/12.
+//  Created by Mark Harris on 7/11/12.
 //  Copyright (c) 2012 Sandlot Software, LLC. All rights reserved.
 //
 
@@ -78,19 +78,7 @@
     }
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-
-    // Register for Apple Push Notification Service
-    [self registerForRemoteNotifications];
-
-    // Initialize our coredata instance
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"PelotoniaModel"];
-
-    // clear the SDWebImageCache
-    [[[SDWebImageManager sharedManager] imageCache] clearDisk];
-    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
-
+- (void)setDefaultAppearance {
     // set default appearance
     [[UIButton appearance] setTintColor:PRIMARY_GREEN];
     
@@ -100,10 +88,10 @@
     shadow.shadowOffset = CGSizeMake(0.0, 1.0);
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-           NSForegroundColorAttributeName: SECONDARY_LIGHT_GRAY,
-           NSShadowAttributeName: shadow,
-           NSFontAttributeName: PELOTONIA_FONT_BOLD(21),
-           }];
+                                                           NSForegroundColorAttributeName: SECONDARY_LIGHT_GRAY,
+                                                           NSShadowAttributeName: shadow,
+                                                           NSFontAttributeName: PELOTONIA_FONT_BOLD(21),
+                                                           }];
     [[UINavigationBar appearance] setTintColor: PRIMARY_GREEN];
     [[UINavigationBar appearance] setBarTintColor:PRIMARY_DARK_GRAY];
     [[UINavigationBar appearance] setBackgroundColor:PRIMARY_DARK_GRAY];
@@ -112,7 +100,9 @@
     pageControl.pageIndicatorTintColor = SECONDARY_LIGHT_GRAY;
     pageControl.currentPageIndicatorTintColor = SECONDARY_GREEN;
     pageControl.backgroundColor = [UIColor clearColor];
-    
+}
+
+- (void)setupSocialize:(NSDictionary *) launchOptions {
     
     // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
     [Socialize storeLocationSharingDisabled:YES];
@@ -120,7 +110,7 @@
     [Socialize storeConsumerSecret:@"6b070689-31a9-4f5a-907e-4422d87a9e42"];
     [SZFacebookUtils setAppId:@"269799726466566"];
     [SZTwitterUtils setConsumerKey:@"5wwPWS7GpGvcygqmfyPIcQ" consumerSecret:@"95FOLBeQqgv0uYGMWewxf50U0sVAVIbVBlvsmjiB4V8"];
-
+    
     // Specify a Socialize entity loader block
     [Socialize setEntityLoaderBlock:^(UINavigationController *navigationController, id<SocializeEntity>entity) {
         NSDictionary *metaDict = [NSDictionary dictionaryWithContentsOfJSONString:[entity meta]];
@@ -146,7 +136,7 @@
             rider.profileUrl = [entity key];
             
             [rider refreshFromWebOnComplete:^(Rider *rider) {
-
+                
                 // navigate to the riders view controller & show the profile
                 InitialSlidingViewController *rvc = (InitialSlidingViewController *)self.window.rootViewController;
                 UINavigationController *nvc = (UINavigationController *)rvc.topViewController;
@@ -171,8 +161,27 @@
     if (userInfo != nil) {
         [self handleNotification:userInfo];
     }
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    // Register for Apple Push Notification Service
+    [self registerForRemoteNotifications];
+
+    // Initialize our coredata instance
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"PelotoniaModel"];
+
+    // clear the SDWebImageCache
+    [[[SDWebImageManager sharedManager] imageCache] clearDisk];
+    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
+
+    [self setDefaultAppearance];
     
-    // call the Appirater class
+    // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
+    [self setupSocialize:launchOptions];
+    
+    // setup Appirater
     [Appirater setAppId:@"550038050"];
     [Appirater setDaysUntilPrompt:5];
     [Appirater setUsesUntilPrompt:3];

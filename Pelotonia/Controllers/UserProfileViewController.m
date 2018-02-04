@@ -53,6 +53,8 @@
 @synthesize recentComments;
 @synthesize library;
 
+static bool introShown = false;
+
 // property overloads
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -83,16 +85,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    // if this is our first time loading, pop up the "this is how you use me" screen
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    if (nil == [defaults objectForKey:@"firstRun"] || ([self showInDebug])) {
-        [defaults setObject:[NSDate date] forKey:@"firstRun"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+
+    if (introShown == false) {
         [self performSegueWithIdentifier:@"SegueToIntroViewController" sender:self];
+        introShown = true;
     }
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -260,7 +257,7 @@
     
     if ([segueID isEqualToString:@"SegueToIntroViewController"]) {
         // no-op, nothing to do
-//        IntroViewController *introViewController = (IntroViewController *)segue.destinationViewController;
+        IntroViewController *introViewController = (IntroViewController *)segue.destinationViewController;
     }
         
 }

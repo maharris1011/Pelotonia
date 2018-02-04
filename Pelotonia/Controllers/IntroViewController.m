@@ -28,13 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageTitles = @[@"Rides, Photos, & Donations", @"Your Profile at a Glance", @"Solicit Donations on the Go", @"Support your Team", @"Share Your Progress"];
-    self.pageDetailText = @[@"Everything you need to remember a great Pelotonia",
-                            @"Track your stats in the palm of your hand",
-                            @"Solicit donations through email in real time",
-                            @"Follow your favorite riders' progress",
-                            @"Keep friends & family up to date on Facebook or Twitter"];
-    self.pageImages = @[@"user_profile", @"rider_profile", @"solicit_donations", @"follow_friends", @"share_progress"];
+    self.pageTitles = @[@"", @"Great Things are Coming"];
+    self.pageDetailText = @[@"", @"New for 2018, this app will be replaced by something better. Watch this space!"];
+    self.pageImages = @[@"10th-anniversary", @"LaunchImage"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPageViewController"];

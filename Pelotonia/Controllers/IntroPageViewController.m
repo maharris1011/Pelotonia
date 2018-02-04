@@ -36,7 +36,6 @@
 }
 
 -(BOOL)shouldAutorotate
-
 {
     return NO;
     
