@@ -37,6 +37,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)gotoPull:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pulll.org"] options:@{} completionHandler:nil];
+}
+
 -(BOOL)shouldAutorotate
 
 {

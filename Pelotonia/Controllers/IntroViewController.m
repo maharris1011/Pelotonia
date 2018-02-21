@@ -28,9 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageTitles = @[@"", @"Great Things are Coming"];
-    self.pageDetailText = @[@"", @"New for 2018, this app will be replaced by something better. Watch this space!"];
-    self.pageImages = @[@"10th-anniversary", @"LaunchImage"];
+    self.pageTitles = @[@""];
+    self.pageDetailText = @[@"For 2018, the Pelotonia app will be replaced by PULLL. Use Pulll to supercharge your fundraising, share progress, and engage the Pelotonia community!"];
+    self.pageImages = @[@"pulll"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPageViewController"];
