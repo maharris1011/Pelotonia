@@ -319,6 +319,9 @@
                         <color key="tintColor" red="0.20559871196746826" green="0.82006818056106567" blue="0.13516244292259216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="showPelotoniaButton" destination="Pha-T0-j6K" id="BYN-Fq-ORF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQD-co-odq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2432,8 +2435,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sBj-i1-1JD"/>
-        <segue reference="tZz-dL-tdX"/>
-        <segue reference="3uV-Ni-IJj"/>
+        <segue reference="Af6-8I-wY6"/>
+        <segue reference="icE-Ng-qJb"/>
         <segue reference="s56-AL-OFT"/>
     </inferredMetricsTieBreakers>
 </document>

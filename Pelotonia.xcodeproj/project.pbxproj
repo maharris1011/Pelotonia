@@ -679,7 +679,7 @@
 				TargetAttributes = {
 					BCE3B7B115AE49DA00205530 = {
 						DevelopmentTeam = E8N9T3D525;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1286,7 +1286,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "eb8919af-69e1-43ff-b363-2332cb44961e";
 				PROVISIONING_PROFILE_SPECIFIER = "Pelotonia AdHoc";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1455,7 +1456,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "Pelotonia Development";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1511,7 +1513,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "519b2e82-5cc1-4582-8148-940d264e4454";
 				PROVISIONING_PROFILE_SPECIFIER = "Pelotonia App Store";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pelotonia/Pelotonia-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "Pelotonia/Vendor/**";
 				VALID_ARCHS = "armv7 armv7s arm64";

@@ -16,6 +16,38 @@
 
 @implementation IntroViewController
 
+@synthesize showPelotoniaButton;
+
+- (NSDate *)cutoffDate {
+    // original string
+    NSString *str = [NSString stringWithFormat:@"2018-06-01"];
+    
+    // convert to date
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"YYYY-MM-dd"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"EST"]];
+    NSDate *dte = [dateFormat dateFromString:str];
+    NSLog(@"Date: %@", dte);
+    return dte;
+}
+
+- (BOOL)shouldShowPelotoniaButton
+{
+    NSDate *today = [NSDate date];
+    NSDate *cutoff = [self cutoffDate];
+    
+    return ([today compare:cutoff] == NSOrderedAscending ? true : false);
+}
+
+- (void)showHidePelotoniaButton
+{
+    if ([self shouldShowPelotoniaButton]) {
+        self.showPelotoniaButton.hidden = NO;
+    } else {
+        self.showPelotoniaButton.hidden = YES;
+    }
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +75,8 @@
     // Change the size of page view controller
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
     
+    
+    [self showHidePelotoniaButton];
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];

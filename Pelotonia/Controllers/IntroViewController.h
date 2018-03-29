@@ -12,6 +12,7 @@
 
 - (IBAction)startWalkthrough:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *showPelotoniaButton;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSArray *pageTitles;
 @property (strong, nonatomic) NSArray *pageDetailText;
