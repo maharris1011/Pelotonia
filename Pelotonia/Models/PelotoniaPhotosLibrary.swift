@@ -13,7 +13,7 @@ class PelotoniaPhotosLibrary: NSObject {
     let albumName:String = "Pelotonia"
     var collection:PHAssetCollection!
     
-    func library() -> PHPhotoLibrary?
+    @objc func library() -> PHPhotoLibrary?
     {
         if (PHPhotoLibrary.authorizationStatus() != .notDetermined) {
             return PHPhotoLibrary.shared();
@@ -23,7 +23,7 @@ class PelotoniaPhotosLibrary: NSObject {
         }
     }
 
-    func createAlbum(_ completion: @escaping (PHAssetCollection) -> Void) {
+    @objc func createAlbum(_ completion: @escaping (PHAssetCollection) -> Void) {
         
         var assetCollectionPlaceholder: PHObjectPlaceholder!
         
@@ -40,7 +40,7 @@ class PelotoniaPhotosLibrary: NSObject {
         })
     }
 
-    func album(_ completion: @escaping (PHAssetCollection) -> Void) {
+    @objc func album(_ completion: @escaping (PHAssetCollection) -> Void) {
         if (self.collection == nil) {
             let options:PHFetchOptions = PHFetchOptions()
             options.predicate = NSPredicate(format: "estimatedAssetCount >= 0")
@@ -68,7 +68,7 @@ class PelotoniaPhotosLibrary: NSObject {
         }
     }
     
-    func saveImage(_ image : UIImage, completion: @escaping (URL?, Error?) -> Void) {
+    @objc func saveImage(_ image : UIImage, completion: @escaping (URL?, Error?) -> Void) {
         
         library()!.performChanges({ () -> Void in
             let createAssetRequest  = PHAssetChangeRequest.creationRequestForAsset(from: image)
@@ -87,7 +87,7 @@ class PelotoniaPhotosLibrary: NSObject {
             }
     }
     
-    func images(_ completion:@escaping (PHFetchResult<AnyObject>) -> Void) {
+    @objc func images(_ completion:@escaping (PHFetchResult<AnyObject>) -> Void) {
         let options = PHFetchOptions()
         options.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: false)

@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IntroViewController : UIViewController<UIPageViewControllerDataSource>
+@interface IntroViewController : UIViewController
 
 - (IBAction)startWalkthrough:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *explanationText;
 @property (strong, nonatomic) IBOutlet UIButton *showPelotoniaButton;
-@property (strong, nonatomic) UIPageViewController *pageViewController;
-@property (strong, nonatomic) NSArray *pageTitles;
-@property (strong, nonatomic) NSArray *pageDetailText;
-@property (strong, nonatomic) NSArray *pageImages;
+@property (strong, nonatomic) IBOutlet UIButton *pulllButton;
 
 @end
