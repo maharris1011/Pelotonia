@@ -7,14 +7,40 @@
 //
 
 #import "IntroViewController.h"
-#import "IntroContentViewController.h"
-#import "IntroPageViewController.h"
 
 @interface IntroViewController ()
 
 @end
 
 @implementation IntroViewController
+
+@synthesize showPelotoniaButton;
+
+- (NSDate *)cutoffDate {
+    // original string
+    NSString *str = [NSString stringWithFormat:@"2018-06-01"];
+    
+    // convert to date
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"YYYY-MM-dd"];
+    [dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"EST"]];
+    NSDate *dte = [dateFormat dateFromString:str];
+    NSLog(@"Date: %@", dte);
+    return dte;
+}
+
+- (BOOL)shouldShowPelotoniaButton
+{
+    NSDate *today = [NSDate date];
+    NSDate *cutoff = [self cutoffDate];
+    
+    return ([today compare:cutoff] == NSOrderedAscending ? true : false);
+}
+
+- (void)showHidePelotoniaButton
+{
+    self.showPelotoniaButton.hidden = ([self shouldShowPelotoniaButton] ? NO : YES);
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,24 +54,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageTitles = @[@""];
-    self.pageDetailText = @[@"For 2018, the Pelotonia app will be replaced by PULLL. Use Pulll to supercharge your fundraising, share progress, and engage the Pelotonia community!"];
-    self.pageImages = @[@"pulll"];
     
-    // Create page view controller
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroPageViewController"];
-    self.pageViewController.dataSource = self;
-    
-    IntroContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
-    
-    [self addChildViewController:self.pageViewController];
-    [self.view addSubview:self.pageViewController.view];
-    [self.pageViewController didMoveToParentViewController:self];
+    [self showHidePelotoniaButton];
+    self.explanationText.text = @"For the 10-year anniversary of Pelotonia, we are releasing a" \
+    " new application called PULLL. The Pelotonia app will be retired on June 1st, 2018.";
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,62 +79,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - Page View Controller Helpers
-
-- (IntroContentViewController *)viewControllerAtIndex:(NSUInteger)index
-{
-    if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {
-        return nil;
-    }
-    
-    // Create a new view controller and pass suitable data.
-    IntroContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroContentViewController"];
-    pageContentViewController.imageFile = self.pageImages[index];
-    pageContentViewController.titleText = self.pageTitles[index];
-    pageContentViewController.detailText = self.pageDetailText[index];
-    pageContentViewController.pageIndex = index;
-    
-    return pageContentViewController;
+- (IBAction)pulllButtonClick:(id)sender {
+    // open up the "tell me about pulll" window
+    [self gotoPull];
 }
 
-#pragma mark - Page View Controller Data Source
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-{
-    NSUInteger index = ((IntroContentViewController *) viewController).pageIndex;
-    
-    if ((index == 0) || (index == NSNotFound)) {
-        return nil;
-    }
-    
-    index--;
-    return [self viewControllerAtIndex:index];
+- (void)gotoPull {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.pulll.org"] options:@{} completionHandler:nil];
 }
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    NSUInteger index = ((IntroContentViewController *) viewController).pageIndex;
-    
-    if (index == NSNotFound) {
-        return nil;
-    }
-    
-    index++;
-    if (index == [self.pageTitles count]) {
-        return nil;
-    }
-    return [self viewControllerAtIndex:index];
-}
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-    return [self.pageTitles count];
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return 0;
-}
-
 
 @end

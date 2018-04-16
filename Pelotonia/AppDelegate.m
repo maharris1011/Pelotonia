@@ -59,23 +59,18 @@
     }
 }
 
+- (void)register {
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
 - (void)registerForRemoteNotifications {
-    if(SYSTEM_VERSION_GREATERTHAN_OR_EQUALTO(@"10.0")){
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        center.delegate = self;
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
-            if(!error){
-                [[UIApplication sharedApplication] registerForRemoteNotifications];
-            }
-        }];
-    }
-    else {
-        UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-        UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-        [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
-        
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+        if(!error){
+            [self performSelectorOnMainThread:@selector(register) withObject:nil waitUntilDone:true];
+        }
+    }];
 }
 
 - (void)setDefaultAppearance {
