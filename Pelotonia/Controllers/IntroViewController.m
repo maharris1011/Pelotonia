@@ -18,7 +18,7 @@
 
 - (NSDate *)cutoffDate {
     // original string
-    NSString *str = [NSString stringWithFormat:@"2018-06-01"];
+    NSString *str = [NSString stringWithFormat:@"2018-04-04"];
     
     // convert to date
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -57,7 +57,7 @@
     
     [self showHidePelotoniaButton];
     self.explanationText.text = @"For the 10-year anniversary of Pelotonia, we are releasing a" \
-    " new application called PULLL. The Pelotonia app will be retired on June 1st, 2018.";
+    " new application called PULLL. The Pelotonia app will be retired on May 4th, 2018.";
 }
 
 - (void)didReceiveMemoryWarning

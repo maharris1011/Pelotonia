@@ -315,7 +315,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Um-tiz">
-                                <rect key="frame" x="16" y="138" width="343" height="111"/>
+                                <rect key="frame" x="16" y="138" width="341" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="NqD-Ac-6Kv"/>
                                 </constraints>
@@ -324,7 +324,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-n9-hAj">
-                                <rect key="frame" x="91" y="392" width="192" height="36"/>
+                                <rect key="frame" x="57" y="392" width="261" height="36"/>
                                 <color key="backgroundColor" red="0.2611419559" green="0.29600024219999999" blue="0.32196855549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Baksheesh-Bold" family="Baksheesh" pointSize="20"/>
                                 <state key="normal" title="Tell me about PULLL!">
@@ -335,7 +335,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fje-3e-Irp">
-                                <rect key="frame" x="129" y="317" width="118" height="32"/>
+                                <rect key="frame" x="128" y="317" width="118" height="32"/>
                                 <state key="normal" backgroundImage="pulll"/>
                                 <connections>
                                     <action selector="pulllButtonClick:" destination="R6E-qa-gmV" eventType="touchUpInside" id="dDI-3A-Z3B"/>
@@ -345,17 +345,18 @@
                         <color key="backgroundColor" red="0.22352941330000001" green="0.83529412749999998" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" red="0.20559871196746826" green="0.82006818056106567" blue="0.13516244292259216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ySd-n9-hAj" secondAttribute="bottom" constant="239" id="09N-1o-gWz"/>
                             <constraint firstItem="X9U-Um-tiz" firstAttribute="leading" secondItem="mxs-oF-XsG" secondAttribute="leadingMargin" id="78M-S1-cHf"/>
-                            <constraint firstItem="ySd-n9-hAj" firstAttribute="centerX" secondItem="mxs-oF-XsG" secondAttribute="centerX" id="A7G-Xf-SYa"/>
+                            <constraint firstItem="ySd-n9-hAj" firstAttribute="leading" secondItem="mxs-oF-XsG" secondAttribute="leadingMargin" constant="41" id="8ZM-VW-ysr"/>
+                            <constraint firstItem="ySd-n9-hAj" firstAttribute="leading" secondItem="mxs-oF-XsG" secondAttribute="leadingMargin" constant="41" id="FsA-l7-pNw"/>
                             <constraint firstItem="fje-3e-Irp" firstAttribute="top" secondItem="X9U-Um-tiz" secondAttribute="bottom" constant="68" id="G8N-A2-P43"/>
                             <constraint firstItem="Pha-T0-j6K" firstAttribute="centerX" secondItem="mxs-oF-XsG" secondAttribute="centerX" id="Hal-Ke-ahm"/>
-                            <constraint firstItem="ySd-n9-hAj" firstAttribute="top" secondItem="fje-3e-Irp" secondAttribute="bottom" constant="43" id="QW5-I1-X3S"/>
-                            <constraint firstItem="Pha-T0-j6K" firstAttribute="top" secondItem="ySd-n9-hAj" secondAttribute="bottom" constant="136" id="WIq-tM-CeF"/>
-                            <constraint firstItem="ySd-n9-hAj" firstAttribute="top" secondItem="fje-3e-Irp" secondAttribute="bottom" constant="43" id="YSG-sz-dE0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ySd-n9-hAj" secondAttribute="trailing" constant="41" id="YfN-1F-1sc"/>
                             <constraint firstItem="fje-3e-Irp" firstAttribute="centerX" secondItem="mxs-oF-XsG" secondAttribute="centerX" id="gmr-WQ-l0F"/>
-                            <constraint firstItem="Pha-T0-j6K" firstAttribute="top" secondItem="ySd-n9-hAj" secondAttribute="bottom" constant="136" id="mdv-FQ-jmw"/>
+                            <constraint firstItem="ySd-n9-hAj" firstAttribute="centerX" secondItem="fje-3e-Irp" secondAttribute="centerX" id="nqK-W2-phr"/>
                             <constraint firstItem="Cwg-WG-DOV" firstAttribute="top" secondItem="Pha-T0-j6K" secondAttribute="bottom" constant="67" id="paw-W9-yuu"/>
                             <constraint firstItem="X9U-Um-tiz" firstAttribute="centerX" secondItem="fje-3e-Irp" secondAttribute="centerX" id="pcQ-Ic-v35"/>
+                            <constraint firstItem="ySd-n9-hAj" firstAttribute="top" secondItem="fje-3e-Irp" secondAttribute="bottom" constant="43" id="qs4-w7-IJQ"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -473,7 +474,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date/Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84O-zR-YJ9" customClass="TTTAttributedLabel">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date/Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84O-zR-YJ9" customClass="TTTAttributedLabel">
                                                     <rect key="frame" x="20" y="0.0" width="280" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -495,7 +496,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="116.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rU-t6-klS" customClass="TTTAttributedLabel">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rU-t6-klS" customClass="TTTAttributedLabel">
                                                     <rect key="frame" x="20" y="0.0" width="280" height="116"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
